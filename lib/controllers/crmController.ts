@@ -38,7 +38,7 @@ export class ContactController {
     Contact.findOneAndUpdate(
       { _id: req.params.contactId },
       req.body,
-      { new: true },
+      { new: true, useFindAndModify: false },
       (err, contact) => {
         if (err) {
           res.send(err);
