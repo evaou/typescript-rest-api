@@ -17,6 +17,8 @@
 ## Generate Secret Key
 
     $ node -e "console.log(require('crypto').randomBytes(20).toString('hex'))"
+    $ mkdir config
+    $ mv cert.pem key.pem config/
 
 ## Environment Variable
 
