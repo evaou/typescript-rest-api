@@ -6,7 +6,7 @@ const SECRET_KEY: string = env.get("SECRET_KEY").required().asString();
 export class ContactMiddleware {
   public checkSecretKey(req: Request, res: Response, next: NextFunction) {
     if (req.query.key !== SECRET_KEY) {
-      res.status(401).send("You shall not pass!");
+      res.status(401).json({ message: "You shall not pass!" });
     } else {
       next();
     }
