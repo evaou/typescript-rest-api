@@ -29,6 +29,6 @@ export class Routes {
       .put(this.contactController.updateContact)
       .delete(this.contactController.deleteContact);
 
-    app.route("/messages").post(this.messageController.sendNewMessage);
+    app.route("/message").post(this.messageController.sendNewMessage);
   }
 }
