@@ -31,6 +31,6 @@ export class MessageController {
       }, 10000);
     });
 
-    res.send("The POST request is being processed!");
+    res.json({ message: "The POST request is being processed!" });
   }
 }
