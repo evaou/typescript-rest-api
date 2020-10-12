@@ -31,6 +31,11 @@
 
 - enable MongoDB access control
 
+### RabbitMQ Account
+
+- add user in [admin page](http://localhost:15672/#/users)
+- set permission to access virtual hosts
+
 ### Environment Variable
 
     $ export SECRET_KEY=<secret>
@@ -43,13 +48,10 @@
 
     $ npm install
 
-### Message Receiver
-
-    $ ts-node ./lib/receiver.ts
-
 ## Development
 
     $ npm run dev
+    $ ts-node ./lib/receiver.ts
 
 ## Test
 
