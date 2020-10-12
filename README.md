@@ -33,13 +33,19 @@
 
 ### Environment Variable
 
-    $ export MONGODB_USERNAME=<username>
-    $ export MONGODB_PASSWORD=<password>
     $ export SECRET_KEY=<secret>
+    $ export MONGODB_USERNAME=<mongodb_username>
+    $ export MONGODB_PASSWORD=<mongodb_password>
+    $ export RABBITMQ_USERNAME=<rabbitmq_username>
+    $ export RABBITMQ_PASSWORD=<rabbitmq_password>
 
 ### Package
 
     $ npm install
+
+### Message Receiver
+
+    $ ts-node ./lib/receiver.ts
 
 ## Development
 
