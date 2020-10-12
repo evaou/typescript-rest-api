@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import * as amqp from "amqplib/callback_api";
 import * as env from "env-var";
+import { TslogBase } from "../utils/tslogBase";
 
 const RABBITMQ_USERNAME: string = env
   .get("RABBITMQ_USERNAME")
@@ -22,7 +23,7 @@ export class MessageController {
         setTimeout(() => {
           let msg = "Get data from message queue!";
           ch.sendToQueue(q, Buffer.from(msg));
-          console.log(` [X] Send ${msg}`);
+          TslogBase.log.info(` [X] Send ${msg}`);
         }, 5000);
       });
 
